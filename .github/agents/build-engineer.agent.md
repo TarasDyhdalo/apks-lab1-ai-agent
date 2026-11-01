@@ -42,7 +42,7 @@ description: "Створює та перевіряє кросплатформн�
 
 Доступні prompts:
 
-- `/git-init`, `/create-project`, `/create-build`, `/create-actions`, `/check`, `/init`.
+- `/git-init`, `/create-project`, `/create-build`, `/create-actions`, `/check`, `/init-project`.
 
 # Порядок роботи
 
