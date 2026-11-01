@@ -24,7 +24,7 @@ test_runner=pytest
 2. Створи `pyproject.toml` з Python 3.10+, pytest і `pythonpath = ["src"]`.
 3. Створи `requirements-dev.txt` з `pytest`.
 4. Створи `tests/test_basic_addition.py` з класом `TestBasicAddition`, який перевіряє `add`.
-5. Створи `ci.sh`: створи `.venv`, встанови `requirements-dev.txt`, запусти `pytest`, створи `build/hello.pyz` через `python -m zipapp src/hello -o build/hello.pyz -m hello.main:main`, запусти артефакт.
+5. Створи `ci.sh`: створи `.venv`, встанови `requirements-dev.txt`, запусти `pytest`, створи `build/hello.pyz` через `python -m zipapp src/hello -o build/hello.pyz`, запусти артефакт.
 6. Створи `ci.bat` з тією самою послідовністю та шляхом `.venv\Scripts\python.exe`.
 7. Зроби скрипти зупинятися при першій помилці; не приховуй помилки встановлення чи тестів.
 

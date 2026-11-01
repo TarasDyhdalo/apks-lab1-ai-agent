@@ -8,8 +8,8 @@
 
 - **Manifest:** `.github/agents/build-engineer.agent.md` описує роль, межі, заборони, порядок і критерії успіху.
 - **Skills:** `.github/skills/project-scaffold`, `.github/skills/build-and-test` і `.github/skills/github-actions` містять повторювані процедури.
-- **Commands:** `.github/prompts/*.prompt.md` є командами `/git-init`, `/create-project`, `/create-build`, `/create-actions`, `/check` та `/init`.
-- **Orchestrator:** `/init` послідовно викликає команди, перевіряє передумови і зупиняється на першій помилці.
+- **Commands:** `.github/prompts/*.prompt.md` є командами `/git-init`, `/create-project`, `/create-build`, `/create-actions`, `/check` та `/init-project`.
+- **Orchestrator:** `/init-project` послідовно викликає команди, перевіряє передумови і зупиняється на першій помилці.
 
 ## Skills і commands
 
@@ -38,7 +38,7 @@
 
 ## Обробка помилок оркестратором
 
-Перед кроком `/init` перевіряє його передумови. Після кроку фіксує результат і перевіряє очікувані файли. Ненульовий код команди, відсутній файл або невдала перевірка означає `FAIL`: оркестратор показує команду, код і стислий вивід, зупиняється та не переходить далі. Успіх не підміняється порожнім артефактом або прихованою помилкою.
+Перед кроком `/init-project` перевіряє його передумови. Після кроку фіксує результат і перевіряє очікувані файли. Ненульовий код команди, відсутній файл або невдала перевірка означає `FAIL`: оркестратор показує команду, код і стислий вивід, зупиняється та не переходить далі. Успіх не підміняється порожнім артефактом або прихованою помилкою.
 
 ## Відповідність файлів ролям
 
@@ -47,7 +47,7 @@
 | `.github/agents/*.agent.md` | manifest |
 | `.github/skills/*/SKILL.md` | skills |
 | `.github/prompts/*.prompt.md` | commands |
-| `.github/prompts/init.prompt.md` | orchestrator |
+| `.github/prompts/init-project.prompt.md` | orchestrator |
 | `src/`, `tests/`, `ci.sh`, `ci.bat` | проєкт і локальна перевірка |
 | `.github/workflows/ci.yml` | віддалений CI |
 | `README.md`, `docs/usage.md` | документація користувача |

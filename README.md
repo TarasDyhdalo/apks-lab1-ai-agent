@@ -14,4 +14,4 @@
 
 ## Запуск агента
 
-У Copilot Chat виконайте `/init`. Детальна інструкція міститься в [docs/usage.md](docs/usage.md).
+У Copilot Chat виконайте `/init-project`. Детальна інструкція міститься в [docs/usage.md](docs/usage.md).
